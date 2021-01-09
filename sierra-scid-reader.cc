@@ -21,9 +21,6 @@
 // These are necessary aliases on linux
 // stricmp and strnicmp are Windows extensions
 // (string ignore case compare)
-// This preprocessor directive is ignored
-// if you are compiling for a platform
-// other than linux
 #ifdef __linux__
     #define stricmp strcasecmp
     #define strnicmp strncasecmp
