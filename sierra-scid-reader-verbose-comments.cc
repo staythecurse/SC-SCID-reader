@@ -92,7 +92,7 @@ std::vector<s_IntradayRecord> read_scid(std::vector<std::string> dataFiles)
         int recordCount = ((fsize - 56) / 40) + 1;
         std::cout << recordCount << " records to read" << std::endl;
 
-        scidFile.clear(); // clear EOF and FAIL flags that were set by tellg()
+        scidFile.clear(); // clear EOF and FAIL flags that were set by seeking to EOF
         scidFile.seekg(0); // go back to the beginning of the file
 
         if (scidFile.is_open())
